@@ -277,10 +277,13 @@ for t in 1:T
 end
 @constraint(model, obj_primal_final == sum(obj_primal) )
 
-@objective(model, Min,  obj_primal_final)  # single-level objective function
+#@objective(model, Min,  obj_primal_final)  # single-level objective function
 #-------Solve and Output Results
-set_optimizer(model,  Gurobi.Optimizer)   
-optimize!(model)
+#set_optimizer(model,  Gurobi.Optimizer)   
+#optimize!(model)
+
+Primal_LB = 1.460175444460e+04
+
 #set_optimizer_attribute(model, "QCPDual",  1)
 #set_optimizer_attribute(model, "Method", 2)  
 
@@ -289,6 +292,7 @@ optimize!(model)
 #-------------------Define dual model-------------------
 #-------------------------------------------------------
 
+#=
 Pᴳ = value.(Pᴳ)
 yˢᴳ² = value.(yˢᴳ²)
 yˢᴳ³ = value.(yˢᴳ³)
@@ -304,8 +308,9 @@ Cᵁ²⁷ = value.(Cᵁ²⁷)
 Cᵁ³⁰ = value.(Cᵁ³⁰)
 ηₘ_1 = value.(ηₘ_1)
 ηₘ_2 = value.(ηₘ_2)
+=#
 
-model= Model()                     
+#model= Model()                     
 
 @variable(model, ψˢᴳ²_ᵐᵃˣ[1:T] >= 0)    
 @variable(model, ψˢᴳ³_ᵐᵃˣ[1:T] >= 0)
@@ -670,12 +675,12 @@ for t in 1:T
 
 end
 
+@constraint(model, obj_primal_final >= Primal_LB)
+@constraint(model, obj_dual_final <= Dual_UB)
 
-
-@objective(model, Max,  obj_dual_final )
-set_optimizer(model, Gurobi.Optimizer)
-optimize!(model)
-                                
+ 
+               
+Dual_UB = 1.35528943e+04
 
 obj_primal_final = value(obj_primal_final)
 obj_dual_final = value(obj_dual_final)
@@ -697,10 +702,6 @@ plot(λᴱ_value)
 plot(ϕ_value)
 
 
-plot(-λ_2_23_value+μ_23_value)
-plot!(-λ_2_24_value+μ_24_value)
-plot!(μ_23_value)
-plot!(μ_24_value)
 
 
 
