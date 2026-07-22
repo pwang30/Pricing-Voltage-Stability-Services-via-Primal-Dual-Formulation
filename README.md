@@ -18,7 +18,7 @@ The main models and methodologies are in the listed papers here.
 - [Peng Wang, and Luis Badesa. "Pricing Short-Circuit Current via a Primal-Dual Formulation for Preserving Integrality Constraints." arxiv](https://arxiv.org/abs/2510.05293)
 - [Gribik PR, Hogan WW, and Pope SL. "Market-Clearing Electricity Prices and Energy Uplift." Cambridge, MA](https://www.academia.edu/download/45461778/hogan2.pdf)
 3. Data used in this work and relevant work/data refer to:
-- [Wang, Peng, and Luis Badesa. "Imperfect Competition in Markets for Short-Circuit Current Services." arXiv preprint arXiv:2508.09425 (2025)](https://arxiv.org/pdf/2508.09425).
+- [Wang, Peng, and Luis Badesa. "Imperfect Competition in Markets for Short-Circuit Current Services." Sustainable Energy, Grids and Networks (2026): 102423.](https://arxiv.org/pdf/2508.09425)
 
 ---
 
