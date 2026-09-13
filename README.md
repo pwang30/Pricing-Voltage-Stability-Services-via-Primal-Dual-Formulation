@@ -41,7 +41,7 @@ The work is mainly made of two parts:
 # ✒️ Citation
 If you find something helpful or use this code for your own work, please cite this paper:
 <ol>
-      Wang, Peng and Luis Badesa. "A Primal-Dual Formulation for Pricing Static Voltage Stability Services." arXiv preprint arXiv:- (2026).
+      Wang, Peng and Luis Badesa. "A Primal-Dual Formulation for Pricing Static Voltage Stability Services within a Unit Commitment Model." arXiv preprint arXiv:- (2026).
 </ol>
       <br>
       
@@ -49,7 +49,7 @@ If you find something helpful or use this code for your own work, please cite th
 
 ```bibtex
 @misc{-,
-  title        = {A Primal-Dual Formulation for Pricing Static Voltage Stability Services},
+  title        = {A Primal-Dual Formulation for Pricing Static Voltage Stability Services within a Unit Commitment Model},
   author       = {Peng, Wang and Luis, Badesa},
   year         = {2026},
   eprint       = {-},
